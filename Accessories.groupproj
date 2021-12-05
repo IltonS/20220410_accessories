@@ -2,11 +2,6 @@
     <PropertyGroup>
         <ProjectGuid>{1E8C9D2E-9C01-4E9A-9D1C-2CCBBFFC7978}</ProjectGuid>
     </PropertyGroup>
-    <ItemGroup>
-        <Projects Include="Calc\calc.dproj">
-            <Dependencies/>
-        </Projects>
-    </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
         <Borland.ProjectType/>
@@ -14,23 +9,14 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="calc">
-        <MSBuild Projects="Calc\calc.dproj"/>
-    </Target>
-    <Target Name="calc:Clean">
-        <MSBuild Projects="Calc\calc.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="calc:Make">
-        <MSBuild Projects="Calc\calc.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="calc"/>
+        <CallTarget/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="calc:Clean"/>
+        <CallTarget/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="calc:Make"/>
+        <CallTarget/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

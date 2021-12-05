@@ -1,4 +1,4 @@
-program calc;
+program DBcalc2888;
 
 uses
   System.StartUpCopy,
